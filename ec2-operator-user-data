@@ -1,0 +1,12 @@
+#!/bin/bash -v
+# Paste this information into the User Data of your AWS Scheduler instance.
+# It will execute the python script scanning for instances to start/stop at 5 minute intervals.
+
+
+yum install -y python26-pip gcc
+pip install croniter
+OPERATOR=/home/ec2-user/ec2_operator.py
+wget -O $OPERATOR https://raw.githubusercontent.com/calgaryscientific/pureweb-aws-scheduler/master/ec2_operator_pureweb_design.py
+chown ec2-user:ec2-user $OPERATOR
+chmod 644 $OPERATOR
+echo "*/5 * * * * ec2-user python $OPERATOR" >> /etc/crontab
