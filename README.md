@@ -1,5 +1,4 @@
-# pureweb-aws-scheduler
-PureWeb® AWS EC2 Scheduler
+# PureWeb® AWS EC2 Scheduler
 
 Requires creation of Amazon Linux AMI to run the script ec2_operator_pureweb_design.py at a set interval (5 minutes to allow the instances time to start/stop)
 
