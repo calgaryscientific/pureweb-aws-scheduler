@@ -12,6 +12,6 @@ To mark EC2 instances for startup / shutdown attach tags use the tag keys "auto:
 
 ![Example auto:stop and auto:start tags](https://cloud.githubusercontent.com/assets/9810259/7376097/98b17856-ed9a-11e4-8775-9919f79003b9.png)
 
-**Note:** due to the time it takes to start and stop instances:
+**Note:** due to the time it takes to start and stop AWS instances:
 * Starts up instances that have an `auto:start` time in the next 10 minutes
 * Stops instances that have an `auto:stop` falling between now and 10 minutes ago
